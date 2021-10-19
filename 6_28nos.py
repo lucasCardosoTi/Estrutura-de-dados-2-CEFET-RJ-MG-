@@ -19,7 +19,7 @@ def mostra_largura(A):
 def altura(B):
     total = 0 
     altura = 0
-    while total < len(B)-1:    # inicia o laço verificando o tamanho da lista 
+    while total < len(B)-1:    # Inicia o laço verificando o tamanho da lista 
         total += nivel(altura) # Recebe número de elementos para o próximo laço 
         altura += 1      # Contador da altura 
     return altura
