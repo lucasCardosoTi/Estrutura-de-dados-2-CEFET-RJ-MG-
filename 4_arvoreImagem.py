@@ -1,17 +1,16 @@
-# Função imagem de uma HEAP
-
 def nivel(i=0):
     return 2**i
 
+# Função imagem de uma HEAP
 def heap_imagem(A):
     total = 0
-    imagem = A.copy()
+    imagem = A.copy() # Copia do vetor original
     i = 1
     while total < len(A)//2:
-        n = nivel(i)
-        for k in range(0,n):
-            imagem[n+k] = A[2*n + (-1)*k - 1]
-        total = total + n
+        n = nivel(i) # Numero de elementos no nivel i
+        for k in range(0,n): # For para trocar os n elementos do nivel i
+            imagem[n+k] = A[2*n + (-1)*k - 1] # imagem[n+k] -> indice do vetor imagem, A[..]-> indice do vetor original
+        total = total + n # Numero total de elementos 
         i = i + 1
     return imagem
 
